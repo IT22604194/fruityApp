@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beach_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/restart"
+            android:layout_width="152dp"
+            android:layout_height="148dp"
+            android:background="@drawable/restart"
+            android:onClick="restart"
+            android:contentDescription="Restart the game"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/Exit"
+            android:layout_width="138dp"
+            android:layout_height="162dp"
+            android:background="@drawable/exit"
+            android:onClick="exit"
+            android:contentDescription="Exit the game"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ivNewHighest"
+            android:background="@drawable/new_highest"
+            android:visibility="gone" />
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Points:"
+                    android:textColor="#131313"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textSize="50sp"
+                    android:textColor="@android:color/holo_green_dark" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:text="Highest:"
+                    android:textColor="#101010"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvHighest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/holo_orange_dark" />
+            </TableRow>
+
+        </TableLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="80dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
